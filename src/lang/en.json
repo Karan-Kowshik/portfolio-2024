@@ -1,0 +1,9 @@
+{
+	"common": {
+		"home": "Home",
+		"work": "Work",
+		"photography": "Photography",
+		"articles": "Articles",
+		"contact": "Contact"
+	}
+}
