@@ -9,9 +9,20 @@ const projects = {
 			title: "Name",
 		},
 		{
-			name: "description",
+			name: "titleSummary",
 			type: "string",
-			title: "Description",
+			title: "Title summary",
+		},
+		{
+			name: "summaryPoints",
+			type: "array",
+			title: "Points",
+			of: [{ type: "string" }],
+		},
+		{
+			name: "slug",
+			type: "string",
+			title: "URL Slug",
 		},
 	],
 };
