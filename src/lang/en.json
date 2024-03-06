@@ -4,6 +4,19 @@
 		"work": "Work",
 		"photography": "Photography",
 		"articles": "Articles",
-		"contact": "Contact"
+		"contact": "Contact",
+		"startAProject": "Start a project",
+		"resume": "Resume",
+		"linkedIn": "LinkedIn",
+		"instagram": "Instagram",
+		"medium": "Medium",
+		"whatsApp": "WhatsApp"
+	},
+	"footer": {
+		"heading": "I'd love to work with you",
+		"yearsOfExpDesc": "Years of experience as a interdisciplinary designer with 5+ years of professional experience",
+		"successfulProjectsDesc": "Successful projects and collaborative marketing efforts",
+		"backToTop": "Back to top",
+		"developedBySriram": "Developed by G Sriram"
 	}
 }

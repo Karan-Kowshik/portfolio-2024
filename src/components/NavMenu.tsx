@@ -6,7 +6,7 @@ import DarkModeSwitch from "./DarkModeSwitch";
 import { usePathname } from "next/navigation";
 import Button from "./Button";
 import Logo from "@/assets/Logo";
-import { links } from "@/utils/navMenuLinks";
+import { links } from "@/utils/links";
 
 const NavMenu = () => {
 	const pathname = usePathname();
@@ -24,12 +24,8 @@ const NavMenu = () => {
 								key={link.name}
 								href={link.link}
 								className={`text-neutral-600 dark:text-neutral-400 
-								opacity-100 ${
-									pathname === link.link
-										? "text-neutral-1000 dark:text-neutral-50"
-										: ""
-								}
-								hover:opacity-100 transition-all duration-200`}
+								${pathname === link.link ? "text-neutral-1000 dark:text-neutral-50" : ""}
+								hover:text-purple-600 hover:dark:text-purple-400 transition-all duration-200`}
 							>
 								{link.button ? (
 									<Button>{link.name}</Button>

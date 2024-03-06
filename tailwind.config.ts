@@ -55,6 +55,9 @@ const config: Config = {
 					1000: "#0A0A0A",
 				},
 			},
+			fontSize: {
+				"5.5xl": "3.25rem",
+			},
 		},
 	},
 	plugins: [],
