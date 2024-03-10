@@ -24,6 +24,16 @@ const projects = {
 			type: "string",
 			title: "URL Slug",
 		},
+		{
+			name: "isFeaturedProject",
+			type: "boolean",
+			title: "Is featured project?",
+		},
+		{
+			name: "featureImage",
+			type: "image",
+			title: "Feature image",
+		},
 	],
 };
 

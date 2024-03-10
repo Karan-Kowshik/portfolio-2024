@@ -1,5 +1,5 @@
-import Image from "next/image";
+import HeroSection from "@/components/HeroSection";
 
 export default function Home() {
-	return <div>Fricc 2024</div>;
+	return <HeroSection />;
 }

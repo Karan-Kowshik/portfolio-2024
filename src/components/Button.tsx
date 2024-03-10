@@ -6,6 +6,7 @@ interface ButtonProps {
 	to?: string;
 	onClick?: () => void;
 	className?: string;
+	outlined?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -13,11 +14,15 @@ const Button: React.FC<ButtonProps> = ({
 	onClick,
 	to,
 	className,
+	outlined,
 }) => {
+	const buttonClassName = outlined
+		? "outline outline-1 outline-neutral-800"
+		: "bg-purple-600 text-neutral-50";
 	const buttonComponent = (
 		<button
 			onClick={onClick}
-			className="bg-purple-600 text-neutral-50 rounded-full px-6 py-2"
+			className={`${buttonClassName} px-6 py-2  rounded-full`}
 		>
 			{children}
 		</button>

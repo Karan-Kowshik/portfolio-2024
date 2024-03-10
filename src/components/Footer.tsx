@@ -30,7 +30,7 @@ const Footer = () => {
 						<Button className="mt-14" to="/contact">
 							{common.startAProject}
 						</Button>
-						<ul className="mt-4 flex flex-col gap-2 ">
+						<ul className="mt-4 flex flex-col gap-2">
 							{mainFooterLinks.map((link, index) => (
 								<li key={index}>
 									<Link

@@ -10,7 +10,8 @@
 		"linkedIn": "LinkedIn",
 		"instagram": "Instagram",
 		"medium": "Medium",
-		"whatsApp": "WhatsApp"
+		"whatsApp": "WhatsApp",
+		"letsChat": "Let's chat"
 	},
 	"footer": {
 		"heading": "I'd love to work with you",
@@ -18,5 +19,12 @@
 		"successfulProjectsDesc": "Successful projects and collaborative marketing efforts",
 		"backToTop": "Back to top",
 		"developedBySriram": "Developed by G Sriram"
+	},
+	"hero": {
+		"heading": "I craft thoughtful and intuitive digital experiences.",
+		"subHeading1": "Hi, I’m Karan Kowshik.",
+		"subHeading2": "I’m a UI/UX & Product Designer",
+		"subHeading3": "from Bangalore, India.",
+		"subHeading4": "I started as a freelance designer in 2017 and I’m now proudly leading a small team of amazing Designers @ BETSOL. I love creating pleasant experiences for people, establishing empathy for both the people who make and the people who use the products I help bring to life."
 	}
 }

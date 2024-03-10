@@ -1,5 +1,9 @@
 import text from "@/lang/en.json";
 const { common } = text;
+
+export const resumeLink =
+	"https://www.dropbox.com/s/e4v58eg4xqda1jo/Karan%20V%20Kowshik%20Resume.pdf?dl=0";
+
 export const links = [
 	{ name: common.home, link: "/" },
 	{ name: common.photography, link: "/photography" },
@@ -15,7 +19,7 @@ export const mainFooterLinks = [
 export const socialLinks = [
 	{
 		label: common.resume,
-		url: "https://www.dropbox.com/s/e4v58eg4xqda1jo/Karan%20V%20Kowshik%20Resume.pdf?dl=0",
+		url: resumeLink,
 	},
 	{
 		label: common.linkedIn,
