@@ -1,4 +1,5 @@
-import HeroSection from "@/components/HeroSection";
+import HeroSection from "@/components/HomePage/HeroSection";
+import ProcessesSection from "@/components/HomePage/ProcessesSection";
 import ProjectList from "@/components/ProjectList";
 import { Projects } from "@/utils/types";
 import { client } from "sanity/lib/client";
@@ -18,9 +19,10 @@ export default async function Home() {
 		<>
 			<HeroSection />
 			<h2 className="text-4.5xl font-medium">Selected work</h2>
-			<div className="mt-14">
+			<div className="my-14">
 				<ProjectList projects={projects} />
 			</div>
+			<ProcessesSection />
 		</>
 	);
 }

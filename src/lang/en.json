@@ -11,7 +11,8 @@
 		"instagram": "Instagram",
 		"medium": "Medium",
 		"whatsApp": "WhatsApp",
-		"letsChat": "Let's chat"
+		"letsChat": "Let's chat",
+		"readCaseStudy": "Read case study"
 	},
 	"footer": {
 		"heading": "I'd love to work with you",
@@ -26,5 +27,24 @@
 		"subHeading2": "I’m a UI/UX & Product Designer",
 		"subHeading3": "from Bangalore, India.",
 		"subHeading4": "I started as a freelance designer in 2017 and I’m now proudly leading a small team of amazing Designers @ BETSOL. I love creating pleasant experiences for people, establishing empathy for both the people who make and the people who use the products I help bring to life."
+	},
+	"process": {
+		"heading": "My design process",
+		"discover": {
+			"title": "Discover",
+			"description": "Start by researching user problems and needs. This phase will include reviewing existing analytics, conducting user interviews, market research, etc., to build the foundation."
+		},
+		"define": {
+			"title": "Define",
+			"description": "I use the research from the first step to define a final problem statement. This phase is all about organizing all the research data acquired in step 1."
+		},
+		"develop": {
+			"title": "Develop",
+			"description": "The goal is to iterate possible solutions for the defined problem usually with the help of sketches, wireframes and low-fidelity prototyping."
+		},
+		"deliver": {
+			"title": "Deliver",
+			"description": "Implement high-fidelity designs and collaborate closely with developers to launch the product after which we continue testing and pushing improvements."
+		}
 	}
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+import Button from "../Button";
 import text from "@/lang/en.json";
 import { resumeLink } from "@/utils/links";
 

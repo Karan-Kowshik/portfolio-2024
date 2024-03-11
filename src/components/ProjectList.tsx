@@ -4,7 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { FC } from "react";
 import { urlForImage } from "sanity/lib/image";
+import text from "@/lang/en.json";
 
+const { common } = text;
 interface ProjectListProps {
 	projects: Projects[];
 }
@@ -35,7 +37,7 @@ const ProjectList: FC<ProjectListProps> = ({ projects }) => {
 								className="text-purple-600 dark:text-purple-400 font-medium"
 								href={`/projects/${project.slug}`}
 							>
-								Read case study
+								{common.readCaseStudy}
 							</Link>
 						</div>
 					</div>
