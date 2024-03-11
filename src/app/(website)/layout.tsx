@@ -27,7 +27,7 @@ export default function RootLayout({
 				<ThemeProvider>
 					<div className="bg-neutral-50 dark:bg-neutral-1000 duration-200 ">
 						<NavMenu />
-						<main className="container  px-5">{children}</main>
+						<main className="container px-5">{children}</main>
 						<Footer />
 					</div>
 				</ThemeProvider>

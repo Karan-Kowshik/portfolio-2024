@@ -12,9 +12,9 @@ const NavMenu = () => {
 	const pathname = usePathname();
 
 	return (
-		<header className="fixed top-0 w-screen  duration-200 z-40 bg-neutral-50 dark:bg-neutral-1000 text-base  px-5">
+		<header className="fixed top-0 w-full duration-200 z-40 bg-neutral-50 dark:bg-neutral-1000 text-base">
 			<div className="w-full relative">
-				<div className="container flex justify-between py-8 items-center mr-5">
+				<div className="container flex justify-between py-8 items-center px-5">
 					<Link href="/">
 						<Logo />
 					</Link>

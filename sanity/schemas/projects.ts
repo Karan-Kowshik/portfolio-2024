@@ -25,7 +25,7 @@ const projects = {
 			title: "URL Slug",
 		},
 		{
-			name: "isFeaturedProject",
+			name: "isFeatured",
 			type: "boolean",
 			title: "Is featured project?",
 		},
