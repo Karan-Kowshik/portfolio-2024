@@ -25,7 +25,7 @@ export default function RootLayout({
 			</head>
 			<body className="transition-all text-neutral-900 dark:text-neutral-50">
 				<ThemeProvider>
-					<div className="bg-neutral-50 dark:bg-neutral-1000 duration-200 ">
+					<div className="bg-neutral-50 dark:bg-neutral-1000 duration-200 pt-28">
 						<NavMenu />
 						<main className="container px-5">{children}</main>
 						<Footer />

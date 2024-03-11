@@ -7,9 +7,9 @@ export const linkedIn = "https://www.linkedin.com/in/karankowshik/";
 
 export const links = [
 	{ name: common.home, link: "/" },
+	{ name: common.work, link: "/work" },
 	{ name: common.photography, link: "/photography" },
 	{ name: common.articles, link: "/articles" },
-	{ name: common.work, link: "/work" },
 	{ name: common.contact, link: "/contact", button: true },
 ];
 export const mainFooterLinks = [
