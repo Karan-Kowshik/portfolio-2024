@@ -3,6 +3,7 @@ const { common } = text;
 
 export const resumeLink =
 	"https://www.dropbox.com/s/e4v58eg4xqda1jo/Karan%20V%20Kowshik%20Resume.pdf?dl=0";
+export const linkedIn = "https://www.linkedin.com/in/karankowshik/";
 
 export const links = [
 	{ name: common.home, link: "/" },
@@ -23,7 +24,7 @@ export const socialLinks = [
 	},
 	{
 		label: common.linkedIn,
-		url: "https://www.linkedin.com/in/karankowshik/",
+		url: linkedIn,
 	},
 	{ label: common.instagram, url: "https://www.instagram.com/karankowshik/" },
 	{ label: common.medium, url: "https://medium.com/@karankowshik" },

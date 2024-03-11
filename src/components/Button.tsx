@@ -7,6 +7,8 @@ interface ButtonProps {
 	onClick?: () => void;
 	className?: string;
 	outlined?: boolean;
+	buttonClass?: string;
+	icon?: ReactNode;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -15,15 +17,18 @@ const Button: React.FC<ButtonProps> = ({
 	to,
 	className,
 	outlined,
+	icon,
+	buttonClass = "",
 }) => {
 	const buttonClassName = outlined
-		? "outline outline-1 outline-neutral-800"
+		? `outline outline-1 outline-neutral-800`
 		: "bg-purple-600 text-neutral-50";
 	const buttonComponent = (
 		<button
 			onClick={onClick}
-			className={`${buttonClassName} px-6 py-2  rounded-full`}
+			className={`${buttonClassName} px-6 py-2  rounded-full ${buttonClass} flex items-center gap-2`}
 		>
+			{icon}
 			{children}
 		</button>
 	);

@@ -2,6 +2,8 @@ import React, { FC } from "react";
 import Button from "../Button";
 import text from "@/lang/en.json";
 import { Testimonials } from "@/utils/types";
+import { linkedIn } from "@/utils/links";
+import BulletPoint from "@/assets/BulletPoint";
 
 const { common, testimonials: testimonialText } = text;
 interface TestimonialsProps {
@@ -60,9 +62,17 @@ const TestimonialsSection: FC<TestimonialsProps> = ({ testimonials }) => {
 				{renderTestimonial(testimonial1)}
 				{renderTestimonial(testimonial2)}
 			</div>
-			<Button className="mt-8" to="/contact">
-				{common.startAProject}
-			</Button>
+			<div className="flex gap-4 mt-8 justify-center">
+				<Button to="/contact">{common.startAProject}</Button>
+				<Button
+					outlined
+					buttonClass="outline-purple-600 text-purple-600 dark:text-purple-400 dark:outline-purple-400"
+					icon={<BulletPoint />}
+					to={linkedIn}
+				>
+					{common.myLinkedIn}
+				</Button>
+			</div>
 		</div>
 	);
 };
