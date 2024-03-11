@@ -1,7 +1,8 @@
 import HeroSection from "@/components/HomePage/HeroSection";
 import ProcessesSection from "@/components/HomePage/ProcessesSection";
+import TestimonialsSection from "@/components/HomePage/TestimonailsSection";
 import ProjectList from "@/components/ProjectList";
-import { Projects } from "@/utils/types";
+import { Projects, Testimonials } from "@/utils/types";
 import { client } from "sanity/lib/client";
 
 export default async function Home() {
@@ -15,6 +16,16 @@ export default async function Home() {
 			titleSummary,
 		}
 	`);
+	const testimonials = await client.fetch<Testimonials[]>(`
+		*[_type == "testimonials"] | order(name asc){
+			_id,
+			name,
+			designation,
+			type,
+			testimonial,
+		}
+	`);
+
 	return (
 		<>
 			<HeroSection />
@@ -23,6 +34,7 @@ export default async function Home() {
 				<ProjectList projects={projects} />
 			</div>
 			<ProcessesSection />
+			<TestimonialsSection testimonials={testimonials} />
 		</>
 	);
 }

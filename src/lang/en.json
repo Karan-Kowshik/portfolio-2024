@@ -12,7 +12,8 @@
 		"medium": "Medium",
 		"whatsApp": "WhatsApp",
 		"letsChat": "Let's chat",
-		"readCaseStudy": "Read case study"
+		"readCaseStudy": "Read case study",
+		"myLinkedIn": "My LinkedIn"
 	},
 	"footer": {
 		"heading": "I'd love to work with you",
@@ -46,5 +47,8 @@
 			"title": "Deliver",
 			"description": "Implement high-fidelity designs and collaborate closely with developers to launch the product after which we continue testing and pushing improvements."
 		}
+	},
+	"testimonials": {
+		"heading": "What people say about me"
 	}
 }

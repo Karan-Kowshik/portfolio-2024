@@ -9,3 +9,10 @@ export interface Projects {
 	isFeatured: boolean;
 	featureImage: Image;
 }
+export interface Testimonials {
+	_id: string;
+	name: string;
+	designation: string;
+	type: string;
+	testimonial: string;
+}
