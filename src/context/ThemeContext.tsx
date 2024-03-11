@@ -27,21 +27,16 @@ const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
 	};
 
 	useEffect(() => {
-		const storedTheme = localStorage.getItem("theme") as Theme;
+		let storedTheme = localStorage.getItem("theme") as Theme;
 		if (storedTheme) {
 			setTheme(storedTheme);
 		} else {
-			const systemTheme = window.matchMedia(
-				"(prefers-color-scheme: dark)"
-			).matches
-				? "dark"
-				: "light";
-			setTheme(systemTheme);
-			document.documentElement.className = systemTheme;
-			localStorage.setItem("theme", systemTheme);
+			storedTheme = "light";
+			setTheme(storedTheme);
 		}
+		document.documentElement.className = storedTheme;
+		localStorage.setItem("theme", storedTheme);
 	}, []);
-
 	return (
 		<ThemeContext.Provider value={{ theme, toggleTheme }}>
 			{children}

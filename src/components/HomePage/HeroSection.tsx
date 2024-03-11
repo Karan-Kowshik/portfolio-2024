@@ -6,7 +6,7 @@ import { resumeLink } from "@/utils/links";
 const { common, hero } = text;
 const HeroSection = () => {
 	return (
-		<div className="grid grid-cols-12 min-h-[calc(100vh-7rem)] items-center">
+		<div className="grid grid-cols-12 min-h-screen items-center">
 			<div className="col-span-12 md:col-span-6">
 				<h1 className="text-5.5xl font-medium leading-tight">
 					{hero.heading}
@@ -24,9 +24,9 @@ const HeroSection = () => {
 				</div>
 			</div>
 			<div className="blob-cont hidden lg:flex">
-				<div className="yellow blob"></div>
+				<div className="pink blob"></div>
 				<div className="red blob"></div>
-				<div className="green blob"></div>
+				<div className="blue blob"></div>
 			</div>
 		</div>
 	);

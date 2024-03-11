@@ -8,9 +8,9 @@
 	--background-end-rgb: 255, 255, 255;
 	--bg: #f0dba5;
 	--text: #151515;
-	--yellow: #edb74d;
-	--red: #eb6666;
-	--green: #6fb18a;
+	--pink: #e7bdfc;
+	--red: #d74f66;
+	--blue: #83a1f3;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,6 +30,7 @@ body {
 			rgb(var(--background-end-rgb))
 		)
 		rgb(var(--background-start-rgb));
+	scroll-behavior: smooth !important;
 }
 
 @layer utilities {
@@ -56,26 +57,26 @@ body {
 	filter: blur(60px);
 }
 
-.yellow {
-	background-color: var(--yellow);
+.pink {
+	background-color: var(--pink);
 	position: absolute;
 	top: 200px;
 	left: 100px;
 	height: 300px;
 	width: 300px;
 
-	animation: yellow 8s infinite ease;
+	animation: pink 8s infinite ease;
 }
 
-.green {
-	background-color: var(--green);
+.blue {
+	background-color: var(--blue);
 	position: absolute;
 	top: 80px;
 	right: -20px;
 	height: 300px;
 	width: 350px;
 
-	animation: green 8s infinite ease;
+	animation: blue 8s infinite ease;
 }
 
 .red {
@@ -89,7 +90,7 @@ body {
 	animation: red 8s infinite linear;
 }
 
-@keyframes yellow {
+@keyframes pink {
 	0% {
 		top: 200px;
 		left: 100px;
@@ -112,7 +113,7 @@ body {
 	}
 }
 
-@keyframes green {
+@keyframes blue {
 	0% {
 		top: 80px;
 		right: -20px;
