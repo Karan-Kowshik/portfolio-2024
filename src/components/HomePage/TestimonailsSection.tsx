@@ -10,7 +10,7 @@ interface TestimonialsProps {
 
 const renderTestimonial = (testimonials: Testimonials[]) => {
 	return (
-		<div className="grid  md:col-span-6 gap-6">
+		<div className="grid col-span-12  md:col-span-6 gap-6">
 			{testimonials.map(testimonial => (
 				<div
 					key={testimonial._id}
@@ -52,7 +52,7 @@ const TestimonialsSection: FC<TestimonialsProps> = ({ testimonials }) => {
 	);
 	const testimonial2 = testimonials.slice(Math.ceil(testimonials.length / 2));
 	return (
-		<div className="my-14">
+		<div className="my-24">
 			<h2 className="text-4.5xl font-medium">
 				{testimonialText.heading}
 			</h2>

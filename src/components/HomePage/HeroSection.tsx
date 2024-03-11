@@ -23,6 +23,11 @@ const HeroSection = () => {
 					</Button>
 				</div>
 			</div>
+			<div className="blob-cont hidden lg:flex">
+				<div className="yellow blob"></div>
+				<div className="red blob"></div>
+				<div className="green blob"></div>
+			</div>
 		</div>
 	);
 };
