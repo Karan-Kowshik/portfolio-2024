@@ -13,7 +13,9 @@ const HeroSection = () => {
 				</h1>
 				<p className="mt-4 leading-6">
 					{hero.subHeading1}{" "}
-					<span className="text-purple-600">{hero.subHeading2} </span>
+					<span className="text-purple-600 dark:text-purple-400">
+						{hero.subHeading2}{" "}
+					</span>
 					{hero.subHeading3} <br /> <br /> {hero.subHeading4}
 				</p>
 				<div className="flex gap-4 mt-9">
@@ -23,10 +25,13 @@ const HeroSection = () => {
 					</Button>
 				</div>
 			</div>
-			<div className="blob-cont hidden lg:flex">
-				<div className="pink blob"></div>
-				<div className="red blob"></div>
-				<div className="blue blob"></div>
+			<div className="blur-wrapper">
+				<div className="blob-cont hidden lg:flex">
+					<div className="pink blob"></div>
+					<div className="orange blob"></div>
+					<div className="blue blob"></div>
+					<div className="red blob"></div>
+				</div>
 			</div>
 		</div>
 	);
