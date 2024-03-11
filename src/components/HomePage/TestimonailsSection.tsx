@@ -69,6 +69,7 @@ const TestimonialsSection: FC<TestimonialsProps> = ({ testimonials }) => {
 					buttonClass="outline-purple-600 text-purple-600 dark:text-purple-400 dark:outline-purple-400"
 					icon={<BulletPoint />}
 					to={linkedIn}
+					newTab
 				>
 					{common.myLinkedIn}
 				</Button>

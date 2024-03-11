@@ -16,9 +16,9 @@ const HeroSection = () => {
 					<span className="text-purple-600">{hero.subHeading2} </span>
 					{hero.subHeading3} <br /> <br /> {hero.subHeading4}
 				</p>
-				<div className="flex gap-4">
-					<Button className="mt-9">{common.letsChat}</Button>
-					<Button outlined to={resumeLink} className="mt-9">
+				<div className="flex gap-4 mt-9">
+					<Button>{common.letsChat}</Button>
+					<Button outlined to={resumeLink} newTab>
 						{common.resume}
 					</Button>
 				</div>

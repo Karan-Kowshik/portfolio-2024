@@ -9,6 +9,7 @@ interface ButtonProps {
 	outlined?: boolean;
 	buttonClass?: string;
 	icon?: ReactNode;
+	newTab?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -19,6 +20,7 @@ const Button: React.FC<ButtonProps> = ({
 	outlined,
 	icon,
 	buttonClass = "",
+	newTab,
 }) => {
 	const buttonClassName = outlined
 		? `outline outline-1 outline-neutral-800`
@@ -34,7 +36,13 @@ const Button: React.FC<ButtonProps> = ({
 	);
 	return (
 		<div className={className}>
-			{to ? <Link href={to}>{buttonComponent} </Link> : buttonComponent}
+			{to ? (
+				<Link href={to} target={newTab ? "_blank" : "_self"}>
+					{buttonComponent}
+				</Link>
+			) : (
+				buttonComponent
+			)}
 		</div>
 	);
 };
