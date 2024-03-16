@@ -10,6 +10,7 @@ interface ButtonProps {
 	buttonClass?: string;
 	icon?: ReactNode;
 	newTab?: boolean;
+	type?: "button" | "submit" | "reset";
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -21,12 +22,14 @@ const Button: React.FC<ButtonProps> = ({
 	icon,
 	buttonClass = "",
 	newTab,
+	type,
 }) => {
 	const buttonClassName = outlined
 		? `outline outline-1 outline-neutral-800`
 		: "bg-purple-600 text-neutral-50";
 	const buttonComponent = (
 		<button
+			type={type}
 			onClick={onClick}
 			className={`${buttonClassName} px-6 py-2  rounded-full ${buttonClass} flex items-center gap-2`}
 		>

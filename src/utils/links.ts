@@ -12,9 +12,14 @@ export const links = [
 	{ name: common.articles, link: "/articles" },
 	{ name: common.contact, link: "/contact", button: true },
 ];
+export const phoneLink = { label: "+91 81975 26224", url: "tel:+918197526224" };
+export const emailLink = {
+	label: "hello@karankowshik.com",
+	url: "mailto:hello@karankowshik.com",
+};
 export const mainFooterLinks = [
-	{ label: "hello@karankowshik.com", url: "mailto:hello@karankowshik.com" },
-	{ label: "+91 81975 26224", url: "tel:+918197526224" },
+	emailLink,
+	phoneLink,
 	{ label: "Bangalore, India", url: "" },
 ];
 export const socialLinks = [
