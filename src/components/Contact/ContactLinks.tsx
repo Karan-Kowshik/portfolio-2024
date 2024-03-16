@@ -1,7 +1,7 @@
-import { emailLink, phoneLink } from "@/utils/links";
+import { calendar, emailLink, phoneLink, whatsApp } from "@/utils/links";
 import Link from "next/link";
 import React from "react";
-
+import Button from "../Button";
 const ContactLinks = () => {
 	return (
 		<div className="col-span-12 md:col-span-5">
@@ -46,6 +46,19 @@ const ContactLinks = () => {
 						{emailLink.label} &#8599;
 					</Link>
 				</div>
+			</div>
+			<div className="flex gap-4 mt-8 ">
+				<Button newTab to={calendar}>
+					Schedule time
+				</Button>
+				<Button
+					outlined
+					buttonClass="outline-green-500 dark:outline-green-600"
+					to={whatsApp}
+					newTab
+				>
+					Chat on WhatsApp
+				</Button>
 			</div>
 		</div>
 	);

@@ -32,6 +32,10 @@ const config: Config = {
 				red: {
 					600: "#DE213D",
 				},
+				green: {
+					500: "#10B981",
+					600: "#059669 ",
+				},
 				purple: {
 					50: "#ECF0FF",
 					100: "#DDE3FF",
