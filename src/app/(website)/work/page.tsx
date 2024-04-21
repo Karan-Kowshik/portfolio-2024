@@ -1,3 +1,4 @@
+export const revalidate = 120;
 import ProjectList from "@/components/ProjectList";
 import { Projects } from "@/utils/types";
 import React from "react";

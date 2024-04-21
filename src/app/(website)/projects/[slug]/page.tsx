@@ -1,3 +1,5 @@
+export const revalidate = 120;
+
 import { Projects } from "@/utils/types";
 import React from "react";
 import { client } from "sanity/lib/client";
@@ -8,7 +10,8 @@ import BulletPoint from "@/assets/BulletPoint";
 import ChevronUp from "@/assets/ChevronUp";
 
 const page = async ({ params }: { params: { slug: string } }) => {
-	const projects = await client.fetch<Projects>(`
+	const projects = await client.fetch<Projects>(
+		`
 		*[_type == "projects" && slug.current == "${params.slug}"][0]{
 			_id,
 			name,
@@ -23,7 +26,8 @@ const page = async ({ params }: { params: { slug: string } }) => {
 			titleSummary,
 			content
 		}
-	`);
+	`
+	);
 	const myPortableTextComponents: Partial<PortableTextReactComponents> = {
 		block: {
 			h2: ({ children }) => (
