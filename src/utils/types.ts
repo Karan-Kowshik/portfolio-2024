@@ -8,6 +8,18 @@ export interface Projects {
 	slug: string;
 	isFeatured: boolean;
 	featureImage: Image;
+	content: Array<any>;
+	caseStudyTitle?: string;
+	projectOverview?: Array<any>;
+	work?: string[];
+	timeline?: string;
+	impact?: {
+		impactDescription?: Array<any>;
+		impactPoints?: Array<{
+			number: string;
+			subtext: string;
+		}>;
+	};
 }
 export interface Testimonials {
 	_id: string;

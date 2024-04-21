@@ -36,7 +36,10 @@ const ContactForm = () => {
 				For a tailored response to your design needs, please fill out
 				the form below.
 			</p>
-			<form className="mt-8 flex flex-col gap-4">
+			<form
+				action="https://formspree.io/f/xwkgnlry"
+				className="mt-8 flex flex-col gap-4"
+			>
 				<label className="grid grid-cols-6 items-center gap-4">
 					<span className="md:col-span-2 col-span-6 font-medium">
 						Name{requiredAsterix}

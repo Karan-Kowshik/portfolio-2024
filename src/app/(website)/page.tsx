@@ -27,7 +27,7 @@ export default async function Home() {
 	`);
 
 	return (
-		<>
+		<div className="container px-5">
 			<HeroSection />
 			<h2 className="text-4.5xl font-medium">Selected work</h2>
 			<div className="my-14">
@@ -35,6 +35,6 @@ export default async function Home() {
 			</div>
 			<ProcessesSection />
 			<TestimonialsSection testimonials={testimonials} />
-		</>
+		</div>
 	);
 }

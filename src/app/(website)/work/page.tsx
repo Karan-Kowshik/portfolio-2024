@@ -15,7 +15,7 @@ const page = async () => {
 		}
 	`);
 	return (
-		<div className="my-14">
+		<div className="my-14 container px-5">
 			<h1 className="text-5.5xl font-medium my-14">All work</h1>
 			<ProjectList projects={projects} />
 		</div>
