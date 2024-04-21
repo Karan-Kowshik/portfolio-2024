@@ -80,20 +80,20 @@ const page = async ({ params }: { params: { slug: string } }) => {
 			<Image
 				width="0"
 				height="0"
-				alt={projects.name}
+				alt={projects?.name}
 				style={{
 					width: "100%",
 					height: "500px",
 					objectFit: "cover",
 					overflowX: "visible",
 				}}
-				src={urlForImage(projects.featureImage) as string}
+				src={urlForImage(projects?.featureImage) as string}
 				sizes="100vw hidden lg:block"
 			/>
 
 			<div className="container px-5">
 				<h1 className="text-5.5xl font-medium my-14">
-					{projects.caseStudyTitle}
+					{projects?.caseStudyTitle}
 				</h1>
 				<div className="grid grid-cols-12 md:grid-cols-12 gap-3">
 					{projects?.projectOverview && (
@@ -125,14 +125,14 @@ const page = async ({ params }: { params: { slug: string } }) => {
 								Timeline
 							</h3>
 							<p className="text-lg font-normal mt-3 md:w-1/2">
-								{projects.timeline}
+								{projects?.timeline}
 							</p>
 						</div>
 					)}
 				</div>
 				<div className="mt-32">
 					<PortableText
-						value={projects.content}
+						value={projects?.content}
 						components={myPortableTextComponents}
 					/>
 				</div>
@@ -142,12 +142,12 @@ const page = async ({ params }: { params: { slug: string } }) => {
 						{projects.impact?.impactDescription && (
 							<div className="md:col-span-6 col-span-12">
 								<PortableText
-									value={projects.impact.impactDescription}
+									value={projects?.impact?.impactDescription}
 									components={myPortableTextComponents}
 								/>
 							</div>
 						)}
-						<div className="col-span-12 md:col-span-6 md:col-start-8 grid grid-cols-12 gap-x-12 gap-y-8 justify-between">
+						<div className="col-span-12 md:col-span-6 md:col-start-8 grid grid-cols-12 gap-x-12 gap-y-12 justify-between">
 							{projects?.impact?.impactPoints?.map(impact => (
 								<div
 									key={impact.number}
@@ -155,11 +155,11 @@ const page = async ({ params }: { params: { slug: string } }) => {
 								>
 									<h2 className="text-5.5xl leading-9 font-bold flex items-end gap-2">
 										<ChevronUp />
-										{impact.number}
+										{impact?.number}
 									</h2>
 
 									<p className="text-sm font-normal mt-4">
-										{impact.subtext}
+										{impact?.subtext}
 									</p>
 								</div>
 							))}
