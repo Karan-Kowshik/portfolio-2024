@@ -1,11 +1,11 @@
-import { Image } from "sanity";
+import { Image, Slug } from "sanity";
 
 export interface Projects {
 	_id: string;
 	name: string;
 	titleSummary: string;
 	summaryPoints: string[];
-	slug: string;
+	slug: Slug;
 	isFeatured: boolean;
 	featureImage: Image;
 	content: Array<any>;

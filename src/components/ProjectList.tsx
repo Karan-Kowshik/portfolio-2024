@@ -35,7 +35,7 @@ const ProjectList: FC<ProjectListProps> = ({ projects }) => {
 						<div className="mt-14">
 							<Link
 								className="text-purple-600 dark:text-purple-400 font-medium"
-								href={`/projects/${project.slug}`}
+								href={`/projects/${project.slug.current}`}
 							>
 								{common.readCaseStudy}
 							</Link>

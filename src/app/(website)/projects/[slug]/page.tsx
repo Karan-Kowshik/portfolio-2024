@@ -75,6 +75,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
 			},
 		},
 	};
+	if (!projects) return null;
 	return (
 		<>
 			<Image
