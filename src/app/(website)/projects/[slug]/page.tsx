@@ -59,7 +59,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
 					<div className="mt-1">
 						<BulletPoint />
 					</div>
-					{children}
+					<div>{children}</div>
 				</li>
 			),
 		},
