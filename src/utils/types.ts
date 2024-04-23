@@ -14,6 +14,7 @@ export interface Projects {
 	work?: string[];
 	timeline?: string;
 	impact?: {
+		impactName?: string;
 		impactDescription?: Array<any>;
 		impactPoints?: Array<{
 			number: string;

@@ -31,13 +31,13 @@ const page = async ({ params }: { params: { slug: string } }) => {
 	const myPortableTextComponents: Partial<PortableTextReactComponents> = {
 		block: {
 			h2: ({ children }) => (
-				<h2 className="text-3.5xl font-medium">{children}</h2>
+				<h2 className="text-3.5xl font-medium mt-16">{children}</h2>
 			),
 			h3: ({ children }) => (
 				<h3 className="text-2xl font-medium mt-8">{children}</h3>
 			),
 			h4: ({ children }) => (
-				<h3 className="text-xl font-medium mt-8">{children}</h3>
+				<h4 className="text-xl font-medium mt-8">{children}</h4>
 			),
 			normal: ({ children }) => (
 				<p className="text-lg font-normal mt-3 md:w-1/2">{children}</p>
@@ -83,6 +83,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
 		},
 	};
 	if (!projects) return null;
+	console.log(projects.impact);
 	return (
 		<>
 			<Image
@@ -99,14 +100,14 @@ const page = async ({ params }: { params: { slug: string } }) => {
 				sizes="100vw hidden lg:block"
 			/>
 
-			<div className="container px-5">
-				<h1 className="text-5.5xl font-medium my-14">
+			<div className="container px-5 pb-24">
+				<h1 className="text-5.5xl font-medium mt-10 mb-8">
 					{projects?.caseStudyTitle}
 				</h1>
 				<div className="grid grid-cols-12 md:grid-cols-12 gap-3">
 					{projects?.projectOverview && (
 						<div className="md:col-span-6 col-span-12">
-							<h3 className="text-xl font-medium mt-8 mb-3">
+							<h3 className="text-xl font-medium mb-3">
 								Project Overview
 							</h3>
 							<PortableText
@@ -117,7 +118,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
 					)}
 					{projects.work && (
 						<div className="md:col-start-8 md:col-span-2 col-span-6">
-							<h3 className="text-xl font-medium mt-8">Work</h3>
+							<h3 className="text-xl font-medium">Work</h3>
 							<ul className="mt-3">
 								{projects?.work?.map(
 									(item: string, index: number) => (
@@ -129,9 +130,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
 					)}
 					{projects.timeline && (
 						<div className="md:col-span-2 col-span-6">
-							<h3 className="text-xl font-medium mt-8">
-								Timeline
-							</h3>
+							<h3 className="text-xl font-medium">Timeline</h3>
 							<p className="text-lg font-normal mt-3 md:w-1/2">
 								{projects?.timeline}
 							</p>
@@ -144,36 +143,42 @@ const page = async ({ params }: { params: { slug: string } }) => {
 						components={myPortableTextComponents}
 					/>
 				</div>
-				<div className="mb-24">
-					<h2 className="text-3.5xl font-medium ">Impact</h2>
-					<div className="grid grid-cols-12 md:grid-cols-12 gap-3 mt-3">
-						{projects.impact?.impactDescription && (
-							<div className="md:col-span-6 col-span-12">
-								<PortableText
-									value={projects?.impact?.impactDescription}
-									components={myPortableTextComponents}
-								/>
-							</div>
-						)}
-						<div className="col-span-12 md:col-span-6 md:col-start-8 grid grid-cols-12 gap-x-12 gap-y-12 justify-between">
-							{projects?.impact?.impactPoints?.map(impact => (
-								<div
-									key={impact.number}
-									className="md:col-span-6 col-span-12"
-								>
-									<h2 className="text-5.5xl leading-9 font-bold flex items-end gap-2">
-										<ChevronUp />
-										{impact?.number}
-									</h2>
-
-									<p className="text-sm font-normal mt-4">
-										{impact?.subtext}
-									</p>
+				{projects?.impact?.impactName && (
+					<div className="mt-24">
+						<h2 className="text-3.5xl font-medium ">
+							{projects?.impact?.impactName}
+						</h2>
+						<div className="grid grid-cols-12 md:grid-cols-12 gap-3 mt-3">
+							{projects.impact?.impactDescription && (
+								<div className="md:col-span-6 col-span-12">
+									<PortableText
+										value={
+											projects?.impact?.impactDescription
+										}
+										components={myPortableTextComponents}
+									/>
 								</div>
-							))}
+							)}
+							<div className="col-span-12 md:col-span-6 md:col-start-8 grid grid-cols-12 gap-x-12 gap-y-12 justify-between">
+								{projects?.impact?.impactPoints?.map(impact => (
+									<div
+										key={impact.number}
+										className="md:col-span-6 col-span-12"
+									>
+										<h2 className="text-5.5xl leading-9 font-bold flex items-end gap-2">
+											<ChevronUp />
+											{impact?.number}
+										</h2>
+
+										<p className="text-sm font-normal mt-4">
+											{impact?.subtext}
+										</p>
+									</div>
+								))}
+							</div>
 						</div>
 					</div>
-				</div>
+				)}
 			</div>
 		</>
 	);

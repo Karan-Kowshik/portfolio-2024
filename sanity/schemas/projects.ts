@@ -104,6 +104,11 @@ const projects = {
 			type: "object",
 			fields: [
 				{
+					name: "impactName",
+					type: "string",
+					title: "Impact name",
+				},
+				{
 					name: "impactDescription",
 					type: "array",
 					of: [
