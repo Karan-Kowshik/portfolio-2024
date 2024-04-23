@@ -36,6 +36,9 @@ const page = async ({ params }: { params: { slug: string } }) => {
 			h3: ({ children }) => (
 				<h3 className="text-2xl font-medium mt-8">{children}</h3>
 			),
+			h4: ({ children }) => (
+				<h3 className="text-xl font-medium mt-8">{children}</h3>
+			),
 			normal: ({ children }) => (
 				<p className="text-lg font-normal mt-3 md:w-1/2">{children}</p>
 			),
@@ -52,7 +55,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
 		},
 		listItem: {
 			bullet: ({ children }) => (
-				<li className="mt-4 text-lg flex gap-1">
+				<li className="mt-4 text-lg flex gap-1 w-1/2">
 					<div className="mt-1">
 						<BulletPoint />
 					</div>
