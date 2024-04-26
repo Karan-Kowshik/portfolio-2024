@@ -1,18 +1,20 @@
 export const revalidate = 120;
 
 import { Projects } from "@/utils/types";
-import React from "react";
+import { cache } from "react";
 import { client } from "sanity/lib/client";
 import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 import Image from "next/image";
 import { urlForImage } from "sanity/lib/image";
 import BulletPoint from "@/assets/BulletPoint";
 import ChevronUp from "@/assets/ChevronUp";
-
-const page = async ({ params }: { params: { slug: string } }) => {
+type Props = {
+	params: { slug: string };
+};
+const getProjectDetails = cache(async (slug: string) => {
 	const projects = await client.fetch<Projects>(
 		`
-		*[_type == "projects" && slug.current == "${params.slug}"][0]{
+		*[_type == "projects" && slug.current == "${slug}"][0]{
 			_id,
 			name,
 			caseStudyTitle,
@@ -24,10 +26,25 @@ const page = async ({ params }: { params: { slug: string } }) => {
 			summaryPoints,
 			featureImage,
 			titleSummary,
-			content
+			content,
+			seo,
 		}
 	`
 	);
+	return projects;
+});
+
+export async function generateMetadata({ params }: Props) {
+	const project = await getProjectDetails(params.slug);
+	return {
+		title: `${project?.seo?.title ?? project?.name} | Karan Kowshik`,
+		description: project?.seo?.description ?? project?.titleSummary,
+		keywords: project?.seo?.keywords ?? "",
+	};
+}
+
+const page = async ({ params }: { params: { slug: string } }) => {
+	const projects = await getProjectDetails(params.slug);
 	const myPortableTextComponents: Partial<PortableTextReactComponents> = {
 		block: {
 			h2: ({ children }) => (

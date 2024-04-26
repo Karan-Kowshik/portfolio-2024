@@ -145,6 +145,28 @@ const projects = {
 				},
 			],
 		},
+		{
+			title: "SEO",
+			name: "seo",
+			type: "object",
+			fields: [
+				{
+					name: "seoTitle",
+					type: "string",
+					title: "SEO Title",
+				},
+				{
+					name: "seoDescription",
+					type: "string",
+					title: "SEO Description",
+				},
+				{
+					name: "seoKeywords",
+					type: "string",
+					title: "SEO Keywords",
+				},
+			],
+		},
 	],
 };
 

@@ -1,8 +1,13 @@
 import ContactForm from "@/components/Contact/ContactForm";
 import ContactLinks from "@/components/Contact/ContactLinks";
+import { Metadata } from "next";
 
 import React from "react";
-
+export const metadata: Metadata = {
+	title: "Contact | Karan Kowshik",
+	description:
+		"Get in touch with Karan Kowshik to discuss your project, collaboration, or any other queries. Let's bring your ideas to life.",
+};
 const page = () => {
 	return (
 		<div className="container px-5">

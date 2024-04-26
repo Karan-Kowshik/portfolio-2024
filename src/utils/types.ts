@@ -21,6 +21,11 @@ export interface Projects {
 			subtext: string;
 		}>;
 	};
+	seo?: {
+		title: string;
+		description: string;
+		keywords: string;
+	};
 }
 export interface Testimonials {
 	_id: string;
