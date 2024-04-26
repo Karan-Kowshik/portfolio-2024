@@ -54,7 +54,7 @@ const TestimonialsSection: FC<TestimonialsProps> = ({ testimonials }) => {
 	);
 	const testimonial2 = testimonials.slice(Math.ceil(testimonials.length / 2));
 	return (
-		<div className="my-24">
+		<div className="my-32">
 			<h2 className="text-4.5xl font-medium">
 				{testimonialText.heading}
 			</h2>

@@ -53,6 +53,9 @@ const config: Config = {
 					500: "#3B82F6",
 					800: "#1E40AF",
 				},
+				randomColor: {
+					50: "#FEFEFE",
+				},
 				neutral: {
 					50: "#F8FAFC",
 					100: "#F1F5F9",

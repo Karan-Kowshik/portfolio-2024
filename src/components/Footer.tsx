@@ -33,13 +33,17 @@ const Footer = () => {
 						<ul className="mt-4 flex flex-col gap-2">
 							{mainFooterLinks.map((link, index) => (
 								<li key={index}>
-									<Link
-										href={link.url}
-										className="hover:text-purple-600 hover:dark:text-purple-400 hover:duration-200"
-										target="_blank"
-									>
-										{link.label}
-									</Link>
+									{link.url ? (
+										<Link
+											href={link.url}
+											className="hover:text-purple-600 hover:dark:text-purple-400 hover:font-medium hover:duration-200"
+											target="_blank"
+										>
+											{link.label}
+										</Link>
+									) : (
+										link.label
+									)}
 								</li>
 							))}
 						</ul>
@@ -48,7 +52,7 @@ const Footer = () => {
 								<li key={index}>
 									<Link
 										href={link.url}
-										className="hover:text-purple-600 hover:dark:text-purple-400 hover:duration-200"
+										className="hover:text-purple-600 hover:dark:text-purple-400 hover:font-medium hover:duration-200"
 										target="_blank"
 									>
 										{link.label}
@@ -75,7 +79,7 @@ const Footer = () => {
 						<Link
 							href="https://gsriram.dev"
 							target="_blank"
-							className="hover:dark:text-purple-400 hover:text-purple-600  hover:duration-200"
+							className="hover:dark:text-purple-400 hover:text-purple-600 hover:font-medium hover:duration-200"
 						>
 							Developed by G Sriram
 						</Link>
@@ -83,7 +87,7 @@ const Footer = () => {
 					<div className="lg:col-start-12 col-start-10 col-span-4">
 						<Link
 							href=""
-							className="underline hover:dark:text-purple-400 hover:text-purple-600  hover:duration-200"
+							className="underline hover:dark:text-purple-400 hover:text-purple-600  hover:duration-200 hover:font-medium"
 							onClick={() =>
 								window.scrollTo({ top: 0, behavior: "smooth" })
 							}

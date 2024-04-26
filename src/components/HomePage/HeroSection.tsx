@@ -25,8 +25,8 @@ const HeroSection = () => {
 					</Button>
 				</div>
 			</div>
-			<div className="blur-wrapper">
-				<div className="blob-cont hidden lg:flex">
+			<div className="blur-wrapper hidden lg:flex">
+				<div className="blob-cont ">
 					<div className="pink blob"></div>
 					<div className="orange blob"></div>
 					<div className="blue blob"></div>

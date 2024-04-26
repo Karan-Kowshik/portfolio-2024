@@ -24,8 +24,12 @@ const NavMenu = () => {
 								key={link.name}
 								href={link.link}
 								className={`text-neutral-600 dark:text-neutral-400 
-								${pathname === link.link ? "text-neutral-1000 dark:text-neutral-50" : ""}
-								hover:text-purple-600 hover:dark:text-purple-400 transition-all duration-200`}
+								${
+									pathname === link.link
+										? "text-neutral-1000 font-medium dark:text-neutral-50"
+										: ""
+								}
+								hover:text-purple-600 hover:dark:text-purple-400 hover:font-medium transition-all duration-200`}
 							>
 								{link.button ? (
 									<Button>{link.name}</Button>

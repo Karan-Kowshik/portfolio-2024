@@ -13,7 +13,7 @@ const processes = [
 
 const ProcessesSection = () => {
 	return (
-		<div className="my-24">
+		<div className="my-32">
 			<h2 className="text-4.5xl font-medium">{process.heading}</h2>
 			<div className="grid grid-cols-12 gap-6">
 				{processes.map((process, index) => (

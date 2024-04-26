@@ -25,13 +25,13 @@ const Button: React.FC<ButtonProps> = ({
 	type,
 }) => {
 	const buttonClassName = outlined
-		? `outline outline-1`
-		: "bg-purple-600 text-neutral-50";
+		? `outline outline-1 hover:bg-purple-600 duration-200 hover:outline-none hover:text-neutral-100`
+		: "bg-purple-600 hover:bg-purple-700 duration-200 text-neutral-100";
 	const buttonComponent = (
 		<button
 			type={type}
 			onClick={onClick}
-			className={`${buttonClassName} px-6 py-2 ${buttonClass} rounded-full flex items-center gap-2`}
+			className={`${buttonClassName} px-6 py-2 ${buttonClass} rounded-full font-medium  flex items-center gap-2`}
 		>
 			{icon}
 			{children}
