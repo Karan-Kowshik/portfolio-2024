@@ -10,8 +10,6 @@ export const calendar = "https://cal.com/karankowshik";
 export const links = [
 	{ name: common.home, link: "/" },
 	{ name: common.work, link: "/work" },
-	{ name: common.photography, link: "/photography" },
-	{ name: common.articles, link: "/articles" },
 	{ name: common.contact, link: "/contact", button: true },
 ];
 export const phoneLink = { label: "+91 81975 26224", url: "tel:+918197526224" };

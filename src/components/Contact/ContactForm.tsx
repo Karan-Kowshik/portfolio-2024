@@ -37,7 +37,8 @@ const ContactForm = () => {
 				the form below.
 			</p>
 			<form
-				action="https://formspree.io/f/xwkgnlry"
+				action="https://formspree.io/f/xpzvjpyy"
+				method="POST"
 				className="mt-8 flex flex-col gap-4"
 			>
 				<label className="grid grid-cols-6 items-center gap-4">

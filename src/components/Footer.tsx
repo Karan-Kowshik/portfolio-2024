@@ -20,7 +20,7 @@ const stats = [
 
 const Footer = () => {
 	return (
-		<footer>
+		<footer className="mt-56">
 			<div className="w-full bg-neutral-100 dark:bg-neutral-900 py-24 px-8">
 				<div className="grid grid-cols-12 gap-y-8 container">
 					<div className="lg:col-span-8 col-span-12 lg:col-start-2">

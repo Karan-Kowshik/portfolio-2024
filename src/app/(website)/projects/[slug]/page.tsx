@@ -40,7 +40,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
 				<h4 className="text-xl font-medium mt-8">{children}</h4>
 			),
 			normal: ({ children }) => (
-				<p className="text-lg font-normal mt-3 md:w-1/2">{children}</p>
+				<p className="text-lg font-normal mt-3 lg:w-1/2">{children}</p>
 			),
 			description: ({ children }) => (
 				<p className="text-lg font-normal">{children}</p>
@@ -55,7 +55,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
 		},
 		listItem: {
 			bullet: ({ children }) => (
-				<li className="mt-4 text-lg flex gap-1 w-1/2">
+				<li className="mt-4 text-lg flex gap-1 lg:w-1/2">
 					<div className="mt-1">
 						<BulletPoint />
 					</div>
@@ -100,13 +100,13 @@ const page = async ({ params }: { params: { slug: string } }) => {
 				sizes="100vw hidden lg:block"
 			/>
 
-			<div className="container px-5 pb-24">
+			<div className="container px-5">
 				<h1 className="text-5.5xl font-medium mt-10 mb-8">
 					{projects?.caseStudyTitle}
 				</h1>
-				<div className="grid grid-cols-12 md:grid-cols-12 gap-3">
+				<div className="grid grid-cols-12 lg:grid-cols-12 gap-x-3 gap-y-12">
 					{projects?.projectOverview && (
-						<div className="md:col-span-6 col-span-12">
+						<div className="lg:col-span-6 col-span-12">
 							<h3 className="text-xl font-medium mb-3">
 								Project Overview
 							</h3>
@@ -117,7 +117,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
 						</div>
 					)}
 					{projects.work && (
-						<div className="md:col-start-8 md:col-span-2 col-span-6">
+						<div className="lg:col-start-8 lg:col-span-2 col-span-6">
 							<h3 className="text-xl font-medium">Work</h3>
 							<ul className="mt-3">
 								{projects?.work?.map(
@@ -129,9 +129,9 @@ const page = async ({ params }: { params: { slug: string } }) => {
 						</div>
 					)}
 					{projects.timeline && (
-						<div className="md:col-span-2 col-span-6">
+						<div className="lg:col-span-2 col-span-6">
 							<h3 className="text-xl font-medium">Timeline</h3>
-							<p className="text-lg font-normal mt-3 md:w-1/2">
+							<p className="text-lg font-normal mt-3 lg:w-1/2">
 								{projects?.timeline}
 							</p>
 						</div>
@@ -148,9 +148,9 @@ const page = async ({ params }: { params: { slug: string } }) => {
 						<h2 className="text-3.5xl font-medium ">
 							{projects?.impact?.impactName}
 						</h2>
-						<div className="grid grid-cols-12 md:grid-cols-12 gap-3 mt-3">
+						<div className="grid grid-cols-12 lg:grid-cols-12 gap-x-3 gap-y-12 mt-3">
 							{projects.impact?.impactDescription && (
-								<div className="md:col-span-6 col-span-12">
+								<div className="lg:col-span-6 col-span-12">
 									<PortableText
 										value={
 											projects?.impact?.impactDescription
@@ -159,7 +159,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
 									/>
 								</div>
 							)}
-							<div className="col-span-12 md:col-span-6 md:col-start-8 grid grid-cols-12 gap-x-12 gap-y-12 justify-between">
+							<div className="col-span-12 xl:col-span-6 xl:col-start-8 grid grid-cols-12 gap-x-12 gap-y-12 justify-between">
 								{projects?.impact?.impactPoints?.map(impact => (
 									<div
 										key={impact.number}
