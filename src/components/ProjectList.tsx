@@ -15,7 +15,10 @@ const ProjectList: FC<ProjectListProps> = ({ projects }) => {
 	return (
 		<>
 			{projects.map(project => (
-				<div key={project._id} className="grid grid-cols-12 gap-6">
+				<div
+					key={project._id}
+					className="grid grid-cols-12 gap-6 mt-10"
+				>
 					<div className="col-span-12 md:col-span-3">
 						<h5 className="text-2xl font-medium">{project.name}</h5>
 						<p className="mt-1 text-lg">{project.titleSummary}</p>
