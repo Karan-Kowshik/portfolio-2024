@@ -100,7 +100,6 @@ const page = async ({ params }: { params: { slug: string } }) => {
 		},
 	};
 	if (!projects) return null;
-	console.log(projects.impact);
 	return (
 		<>
 			<Image
