@@ -67,7 +67,7 @@ const TestimonialsSection: FC<TestimonialsProps> = ({ testimonials }) => {
 				<Button
 					outlined
 					buttonClass="outline-purple-600 text-purple-600 dark:text-purple-400 dark:outline-purple-400"
-					icon={<BulletPoint />}
+					icon={<BulletPoint colorInherit />}
 					to={linkedIn}
 					newTab
 				>
