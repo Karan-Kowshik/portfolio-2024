@@ -19,7 +19,7 @@ const ProjectList: FC<ProjectListProps> = ({ projects }) => {
 					key={project._id}
 					className="grid grid-cols-12 gap-6 mt-10"
 				>
-					<div className="col-span-12 md:col-span-3">
+					<div className="col-span-12 md:col-span-3 order-2 md:order-1">
 						<h5 className="text-2xl font-medium">{project.name}</h5>
 						<p className="mt-1 text-lg">{project.titleSummary}</p>
 						<ul>
@@ -44,15 +44,19 @@ const ProjectList: FC<ProjectListProps> = ({ projects }) => {
 							</Link>
 						</div>
 					</div>
-					<div className="col-span-12 md:col-span-9 justify-end">
-						<Image
-							width="0"
-							height="0"
-							style={{ width: "100%", height: "auto" }}
-							src={urlForImage(project.featureImage) as string}
-							alt={project.name}
-							sizes="100vw"
-						/>
+					<div className="col-span-12 md:col-span-9 justify-end  order-1 md:order-2">
+						<Link href={`/projects/${project.slug.current}`}>
+							<Image
+								width="0"
+								height="0"
+								style={{ width: "100%", height: "auto" }}
+								src={
+									urlForImage(project.featureImage) as string
+								}
+								alt={project.name}
+								sizes="100vw"
+							/>
+						</Link>
 					</div>
 				</div>
 			))}

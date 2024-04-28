@@ -113,7 +113,8 @@ const page = async ({ params }: { params: { slug: string } }) => {
 					overflowX: "visible",
 				}}
 				src={urlForImage(projects?.featureImage) as string}
-				sizes="100vw hidden lg:block"
+				sizes="100vw"
+				className="hidden lg:block"
 			/>
 
 			<div className="container px-5">
@@ -175,7 +176,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
 									/>
 								</div>
 							)}
-							<div className="col-span-12 xl:col-span-6 xl:col-start-8 grid grid-cols-12 gap-x-12 gap-y-12 justify-between">
+							<div className="col-span-12 xl:col-span-6 xl:col-start-8 grid grid-cols-12 xl:gap-x-12 gap-y-12 justify-between">
 								{projects?.impact?.impactPoints?.map(impact => (
 									<div
 										key={impact.number}
@@ -186,7 +187,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
 											{impact?.number}
 										</h2>
 
-										<p className="text-sm font-normal mt-4">
+										<p className="text-sm font-normal mt-4 text-wrap">
 											{impact?.subtext}
 										</p>
 									</div>
