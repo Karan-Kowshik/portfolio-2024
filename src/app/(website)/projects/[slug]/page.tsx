@@ -79,6 +79,14 @@ const page = async ({ params }: { params: { slug: string } }) => {
 					<div>{children}</div>
 				</li>
 			),
+			number: ({ children }) => (
+				<li className="mt-4 text-lg lg:w-1/2">{children}</li>
+			),
+		},
+		list: {
+			number: ({ children }) => (
+				<ol className="list-decimal list-inside">{children}</ol>
+			),
 		},
 		types: {
 			image: ({ value }: { value: any }) => {
