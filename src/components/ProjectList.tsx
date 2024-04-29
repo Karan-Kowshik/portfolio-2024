@@ -20,7 +20,7 @@ const ProjectList: FC<ProjectListProps> = ({ projects }) => {
 					className="grid grid-cols-12 gap-6 mt-10"
 				>
 					<div className="col-span-12 md:col-span-3 order-2 md:order-1">
-						<h5 className="text-2xl font-medium">{project.name}</h5>
+						<h2 className="text-2xl font-medium">{project.name}</h2>
 						<p className="mt-1 text-lg">{project.titleSummary}</p>
 						<ul>
 							{project.summaryPoints.map((point, index) => (

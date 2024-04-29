@@ -8,6 +8,7 @@ const DarkModeSwitch = () => {
 	return (
 		<button
 			className="absolute top-1/2 -translate-y-1/2  right-8"
+			aria-label="Toggle Dark Mode"
 			onClick={toggleTheme}
 		>
 			{theme === "light" ? (

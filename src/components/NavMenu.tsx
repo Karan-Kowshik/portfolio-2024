@@ -15,7 +15,7 @@ const NavMenu = () => {
 		<header className="sticky top-0 w-full duration-200 z-40 bg-randomColor-50 dark:bg-neutral-1000 text-base">
 			<div className="w-full relative">
 				<div className="container flex justify-between py-8 items-center px-5">
-					<Link href="/">
+					<Link aria-label="Home" href="/">
 						<Logo />
 					</Link>
 					<nav className="hidden xl:flex items-center gap-14">
