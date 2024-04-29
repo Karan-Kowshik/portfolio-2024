@@ -21,9 +21,9 @@ const ProcessesSection = () => {
 						key={index}
 						className="col-span-12 md:col-span-6 lg:col-span-3 mt-14"
 					>
-						<h4 className="text-2xl font-medium">
+						<h3 className="text-2xl font-medium">
 							{index + 1}. {process.title}
-						</h4>
+						</h3>
 						<p className="mt-4 text-lg">{process.description}</p>
 					</div>
 				))}
