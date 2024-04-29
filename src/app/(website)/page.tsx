@@ -2,6 +2,7 @@ export const revalidate = 120;
 
 import HeroSection from "@/components/HomePage/HeroSection";
 import ProcessesSection from "@/components/HomePage/ProcessesSection";
+import Sidebar from "@/components/HomePage/Sidebar";
 import TestimonialsSection from "@/components/HomePage/TestimonailsSection";
 import ProjectList from "@/components/ProjectList";
 import { Projects, Testimonials } from "@/utils/types";
@@ -29,14 +30,17 @@ export default async function Home() {
 	`);
 
 	return (
-		<div className="container px-5">
-			<HeroSection />
-			<h2 className="text-4.5xl font-medium">Selected work</h2>
-			<div className="my-14">
-				<ProjectList projects={projects} />
+		<>
+			<div className="container px-5">
+				<HeroSection />
+				<h2 className="text-4.5xl font-medium">Selected work</h2>
+				<div className="my-14">
+					<ProjectList projects={projects} />
+				</div>
+				<ProcessesSection />
+				<TestimonialsSection testimonials={testimonials} />
 			</div>
-			<ProcessesSection />
-			<TestimonialsSection testimonials={testimonials} />
-		</div>
+			<Sidebar />
+		</>
 	);
 }
