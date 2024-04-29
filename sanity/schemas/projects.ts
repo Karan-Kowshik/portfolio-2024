@@ -1,3 +1,5 @@
+import { orderRankField } from "@sanity/orderable-document-list";
+
 const projects = {
 	name: "projects",
 	type: "document",
@@ -8,6 +10,7 @@ const projects = {
 			type: "string",
 			title: "Name",
 		},
+
 		{
 			name: "titleSummary",
 			type: "string",
@@ -167,6 +170,7 @@ const projects = {
 				},
 			],
 		},
+		orderRankField({ type: "projects" }),
 	],
 };
 

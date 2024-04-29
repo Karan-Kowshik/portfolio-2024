@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 const page = async () => {
 	const projects = await client.fetch<Projects[]>(`
-		*[_type == "projects"]{
+		*[_type == "projects"]|order(orderRank){
 			_id,
 			name,
 			slug,

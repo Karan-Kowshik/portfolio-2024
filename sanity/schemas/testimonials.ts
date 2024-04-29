@@ -1,3 +1,5 @@
+import { orderRankField } from "@sanity/orderable-document-list";
+
 const testimonials = {
 	name: "testimonials",
 	type: "document",
@@ -26,6 +28,7 @@ const testimonials = {
 			type: "text",
 			title: "Testimonial",
 		},
+		orderRankField({ type: "testimonials" }),
 	],
 };
 

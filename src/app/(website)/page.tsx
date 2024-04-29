@@ -9,7 +9,7 @@ import { client } from "sanity/lib/client";
 
 export default async function Home() {
 	const projects = await client.fetch<Projects[]>(`
-		*[_type == "projects" && isFeatured == true]{
+		*[_type == "projects" && isFeatured == true] | order(orderRank){
 			_id,
 			name,
 			slug,
@@ -19,7 +19,7 @@ export default async function Home() {
 		}
 	`);
 	const testimonials = await client.fetch<Testimonials[]>(`
-		*[_type == "testimonials"] | order(name asc){
+		*[_type == "testimonials"] | order(orderRank){
 			_id,
 			name,
 			designation,
