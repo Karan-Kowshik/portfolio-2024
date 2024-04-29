@@ -22,9 +22,9 @@ export interface Projects {
 		}>;
 	};
 	seo?: {
-		title: string;
-		description: string;
-		keywords: string;
+		seoTitle: string;
+		seoDescription: string;
+		seoKeywords: string;
 	};
 }
 export interface Testimonials {

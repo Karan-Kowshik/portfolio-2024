@@ -37,9 +37,9 @@ const getProjectDetails = cache(async (slug: string) => {
 export async function generateMetadata({ params }: Props) {
 	const project = await getProjectDetails(params.slug);
 	return {
-		title: `${project?.seo?.title ?? project?.name} | Karan Kowshik`,
-		description: project?.seo?.description ?? project?.titleSummary,
-		keywords: project?.seo?.keywords ?? "",
+		title: `${project?.seo?.seoTitle ?? project?.name} | Karan Kowshik`,
+		description: project?.seo?.seoDescription ?? project?.titleSummary,
+		keywords: project?.seo?.seoKeywords ?? "",
 	};
 }
 
